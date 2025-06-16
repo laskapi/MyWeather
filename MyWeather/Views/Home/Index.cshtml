@@ -1,0 +1,77 @@
+﻿@model MyWeather.Models.Report
+
+@{
+	ViewData["Title"] = "Weather report";
+}
+
+
+<br />
+<div class="container-fluid">
+	
+	<div class="row pt-3 bg-info-subtle rounded-2">
+
+
+
+		<div class="col-md mb-2 text-center ">
+			<p>
+				<label for="select_city">Wybierz miejscowość:</label>
+			</p>
+				<select class="js-example-basic-single" id="select_city"
+					onchange="update(this.value)" asp-items="@(ViewBag.cities)">
+			</select>
+		</div>
+
+		
+		
+		<div class="col-md-4">
+			
+			<div class="row">
+				<div class="col">
+					<p>Temperatura: </p>
+				</div>
+				<div class="col text-end">
+					<span id="report_temp_id">@Model.temp</span><span> &degC</span>
+				</div>
+			</div>
+
+			<div class="row justify-content-center">
+				<div class="col">
+					<p>Wilgotność: </p>
+				</div>
+				<div class="col text-end">
+					<span id="report_humid_id">@Model.humidity</span><span> %</span>
+				</div>
+			</div>
+
+			<div class="row justify-content-center">
+				<div class="col">
+					<p>Prędkość wiatru: </p>
+				</div>
+				<div class="col text-end">
+					<span id="report_speed_id">@Model.speed</span><span><sup> m</sup>/<sub>s</sub></span>
+				</div>
+			</div>
+
+			<div class="row justify-content-center">
+				<div class="col">
+					<p>Kierunek wiatru: </p>
+				</div>
+				<div class="col text-end">
+					<span id="report_deg_id">@Model.deg</span><span> &deg</span>
+				</div>
+			</div>
+		</div>
+
+		<div class="col text-center ">
+			<img src="@Model.icon" id="report_icon_id" />
+			<p id="report_desc_id">@Model.description</p>
+		</div>
+	
+
+	</div>
+
+	
+	@* 	<div id="weather_partial">
+	</div> *@
+
+</div>

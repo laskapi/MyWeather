@@ -1,0 +1,46 @@
+﻿@model MyWeather.Models.Report
+
+<div class="container">
+	<div class="row justify-content-center">
+		<div class="col  align-self-center">
+			@Html.DisplayFor(m => m.name)
+		</div>
+		<div class="col">
+			@Html.DisplayFor(m => m.description)
+				<img src=@Model.icon>
+		
+			</div>
+		<div class="w-100"></div>
+		<div class="col">
+			@Html.DisplayNameFor(m => m.temp)
+		</div>
+		<div class="col">
+			@Html.DisplayFor(m=>m.temp)
+		</div>
+		<div class="w-100"></div>
+		<div class="col">
+			@Html.DisplayNameFor(m => m.humidity)
+		</div>
+		<div class="col">
+			@Html.DisplayFor(m => m.humidity)
+		</div>
+		<div class="w-100"></div>
+		<div class="col">
+			@Html.DisplayNameFor(m => m.speed)
+		</div>
+		<div class="col">
+			@Html.DisplayFor(m => m.speed)
+		</div>
+		<div class="w-100"></div>
+		<div class="col">
+			@Html.DisplayNameFor(m => m.deg)
+		</div>
+		<div class="col">
+			@Html.DisplayFor(m => m.deg)
+		</div>
+	</div>
+
+
+
+</div>
+
